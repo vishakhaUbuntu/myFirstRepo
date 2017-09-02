@@ -1,0 +1,30 @@
+Create new repository from github.com.
+Create a new directory inside ur home folder for git.
+Go inside git folder.
+Add or modify some file.
+
+Terminal-
+//Create any file
+- Create readme file - echo "# myFirstRepo" >> README.md
+
+//Initialize git
+- git init
+
+//Add the new file that you have created or modified to git
+- git add README.md
+
+//Commit the changes so as to make it visible in your git repo
+- git commit -m "first commit"
+
+//Add remote git origin using the below URL(vishakhaUbuntu is username and myFirstRepo is my repository name)
+- git remote add origin https://github.com/vishakhaUbuntu/myFirstRepo.git
+
+//Push your origin master
+- git push -u origin master
+
+//Before pusing it will ask for your userid and password
+- username : vishakhaUbuntu
+- password : vishakha84
+
+Done
+
