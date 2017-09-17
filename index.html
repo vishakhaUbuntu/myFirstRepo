@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">        
+
+          <style>
+            body
+            {
+                text-align: center;
+                margin: 0;
+                font-family: sans-serif;
+            }
+            .head
+            {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                background-color: cadetblue;
+                color: white;
+                padding-top: 2%;
+                padding-bottom: 2%;
+                text-align: center;
+            }
+            .head1{width: 50%;}
+            header{
+                background: #00795f;
+                width: 100%;
+                padding: 40px 0;
+                color: white;
+                text-align: center;
+            }
+            a{
+                text-decoration: none;
+                color: inherit;
+            }
+            nav ul{
+                background-color: #43a286;
+                overflow: hidden;
+                color: white;
+                padding: 0;
+                text-align: center;
+                margin: 0;
+                transition: max-height 0.4s;
+            }
+            nav ul li{
+                display: inline-block;
+                padding: 20px;
+            }
+            nav ul li:hover{
+                background-color: #399077;
+            }
+            section{
+                line-height: 1.5em;
+                font-size: 0.9em;
+                padding: 40px;
+                width: 75%;
+                margin: 0 auto;
+            }
+            .handle{
+                width: 100%;
+                background: #005c48;
+                text-align: right;
+                box-sizing: border-box;
+                padding: 15px 10px;
+                cursor: pointer;
+                color: white;
+                display: none;
+            }
+            .container
+            {
+                max-width: 80%;
+                padding-left: 50px;
+                padding-right: 50px;
+                display: flex;
+                flex-wrap: wrap;
+                margin-right: auto;
+                margin-left: auto;
+                padding-bottom: 50px;
+            }
+            .LatestBlog
+            {
+                min-width: 150px;
+                display: inline-block;
+                background-color: #43a286;
+                margin: 0px auto 10px auto;
+                padding-left: 10px;
+                padding-right: 10px;
+                width: 30%;
+                text-align: center;
+                overflow: hidden;
+            }
+            .LatestBlog:hover{
+                background-color: #399077;
+                color: white;
+            }
+            #myBtn {
+                    display: none;
+                    position: fixed;
+                    bottom: 20px;
+                    right: 30px;
+                    z-index: 99;
+                    background-color: #43a286;
+                    color: white;
+                    cursor: pointer;
+                    padding: 15px;
+                    border-radius: 10px;
+                }
+                .fixed{
+                    position: fixed;
+                    top: 0;
+                    margin: 0 auto;
+                    width: 100%;
+                }
+                .wrapper{
+                    height: inherit;
+                    width: inherit;
+                }
+                
+                
+                
+                
+            .container2{
+                height: 500px;
+                max-width: 1000px;
+                display: flex;
+                flex-wrap: wrap;
+                margin-right: auto;
+                margin-left: auto;
+                padding-bottom: 50px;
+            } 
+            .div1{
+                width: 25%;
+                height: inherit;
+                float: left;
+                order: -1;
+            }
+            .div2{
+                height: 50%;
+                order: 0;
+                width: auto;
+            }
+            .div3{
+                height: 50%;
+                order: 1;
+            }
+            .div4{
+                width: 25%;
+                height: inherit;
+                order: 2;
+            }
+            .centerDiv{
+                width: 50%; 
+                display: block; 
+                flex-wrap: wrap;
+            }
+            img{
+                max-width: 100%;
+                max-height: 100%;
+            }
+                
+                
+            .footerDiv{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                background-color: #00795f;
+                color: white;
+            }
+            .div1footer{
+                width: 20%;
+                height: inherit;
+                padding-left: 15px;
+                padding-top: 10px;
+            }
+            .div2footer{
+                width: 50%;
+                height: inherit;
+                padding-left: 15px;
+                padding-top: 10px;
+                text-align: center;
+                font-size: 150%;
+            }
+            .div1footer a{
+                color: blue;
+                margin-bottom: 5px;
+            }
+            .div1footer div{
+                padding: 4px;
+            }
+            .div1footer button{
+                height: 50px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                width: 90%;
+                color: white;
+                border: none;
+            }
+            .div1footer div:hover{
+                color: blue;
+            }
+            .new{
+                display: flex;
+            }
+            @media screen and (max-width:500px){
+                .div1footer, .div2footer{
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+                
+                
+                
+                
+            @media screen and (max-width: 800px){
+                .head{
+                    height: auto;
+                }
+                .head1{
+                    width: 100%;
+                    text-align: center;
+                }
+                
+                nav ul{
+                    max-height: 0;
+                }
+                .showing{
+                    max-height: 25em;
+                }
+                nav ul li{
+                    box-sizing: border-box;
+                    width: 100%;
+                    padding: 15px;
+                }
+                .handle{
+                    display: block;
+                }
+                
+                .container, .centerDiv{
+                    text-align: center;
+                }
+                .div1, .div2, .div3, .div4{
+                    width: 100%;
+                }
+                .centerDiv{
+                    width: 100%;
+                }
+                .new{
+                    flex-wrap: wrap;
+                }
+            }
+        </style>
+    </head>
+    <body> 
+        <!-- Contact/Login division -->
+        <div id="headId" class="head">
+            <div class="head1">Call Us +0123456789  |  info@hashdemo.com</div>
+            <div class="head1">Login  |  Register</div>
+        </div>
+        
+        <nav>
+            <div style="display: flex; text-align: center">
+                <!--
+<div style="width:50%;"><img src="icon.jpg" alt="SomeImage" style="height: 90px; width: 150px; opacity: 0.6"></div>
+-->
+            <div style="width: 50%" class="handle"><button class="fa fa-bars" onclick="openNavOnClick()"></button></div>
+            </div>
+            <ul id="navElement">
+                <div class="wrapper">
+                <a href="#"><li>Home</li></a>
+                <a href="#"><li>About</li></a>
+                <a href="#"><li>Service</li></a>
+                <a href="#"><li>Teachers</li></a>
+                <a href="#"><li>Our Events</li></a>
+                <a href="#"><li>Contact</li></a>
+                <a href="#"><li>Buy Now</li></a>
+                </div>
+            </ul>
+        </nav>
+        
+        <div style="margin-left: auto; margin-right: auto; text-align: center; overflow: hidden">
+        <img style="height: 350px; overflow: hidden;" src="img_mountains_wide.jpg">
+        </div>
+        <p id="temp">hi</p>
+        
+        
+        <div style="padding: 10px; margin-bottom: 10px;">--------------------------------------</div>
+        <h1>Our Activities</h1>
+        <h1 style="font-size: 20px">There are many varieations of passages Lorem Ipsum maksu rez majority havee</h1>
+        <div class="container">
+        <div class="LatestBlog">
+            <img src="lime.jpg">
+            <h5>SPORTSS</h5>
+            <h10>There are many variations of passages Lorem lpsum available majority have only alteration some form, have only</h10>
+        </div>
+            <div class="LatestBlog">
+                <img src="lime.jpg">
+                <h5>SPORTSS</h5>
+                <h10>There are many variations of passages Lorem lpsum available majority have only alteration some form, have only</h10></div>
+            <div class="LatestBlog">
+                <img src="lime.jpg">
+                <h5>SPORTSS</h5>
+                <h10>There are many variations of passages Lorem lpsum available majority have only alteration some form, have only</h10></div>
+            <div class="LatestBlog">
+                <img src="lime.jpg">
+                <h5>SPORTSS</h5>
+                <h10>There are many variations of passages Lorem lpsum available majority have only alteration some form, have only</h10></div>
+            <div class="LatestBlog">
+                <img src="lime.jpg">
+                <h5>SPORTSS</h5>
+                <h10>There are many variations of passages Lorem lpsum available majority have only alteration some form, have only</h10></div>
+            <div class="LatestBlog">
+                <img src="lime.jpg">
+                <h5>SPORTSS</h5>
+                <h10>There are many variations of passages Lorem lpsum available majority have only alteration some form, have only</h10></div>
+            </div>
+        
+        <div style="padding: 10px; margin-bottom: 10px;">--------------------------------------</div>
+        <h1>History</h1>
+        <section>
+            History (from Greek ἱστορία, historia, meaning "inquiry, knowledge acquired by investigation")[2] is the study of the past as it is described in written documents.[3][4] Events occurring before written record are considered prehistory. It is an umbrella term that relates to past events as well as the memory, discovery, collection, organization, presentation, and interpretation of information about these events. Scholars who write about history are called historians.
+
+History can also refer to the academic discipline which uses a narrative to examine and analyse a sequence of past events, and objectively determine the patterns of cause and effect that determine them.[5][6] Historians sometimes debate the nature of history and its usefulness by discussing the study of the discipline as an end in itself and as a way of providing "perspective" on the problems of the present.[5][7][8][9]
+
+Stories common to a particular culture, but not supported by external sources (such as the tales surrounding King Arthur), are usually classified as cultural heritage or legends, because they do not show the "disinterested investigation" required of the discipline of history.
+        </section>
+        
+        
+        <div style="padding: 10px; margin-bottom: 10px;">--------------------------------------</div>
+        <h1>Gallery</h1>
+        <div class="container2">
+            <div class="new">
+            <div class="div1"><img src="img2.png"></div>
+            <div class="centerDiv">
+                <div class="div2"><img src="img1.png"></div>
+                <div class="div3"><img src="img1.png"></div>
+            </div>
+            <div class="div4"><img src="img2.png"></div>
+            </div>
+        
+        <!-- Footer -->                
+        <div class="footerDiv">
+            <div class="div1footer">
+                <a href="#">Quick Links</a>
+                    <div>Home</div>
+                    <div>About</div>
+                    <div>Service</div>
+                    <div>Teachers</div>
+                    <div>Our Events</div>
+                    <div>Contact</div>
+                    <div>Buy Now</div>
+            </div>
+            
+            <div class="div1footer">
+                <button style="background-color: orangered">Sign Up for Newsletter</button>
+                <button style="background-color: grey">See Our Work</button>
+            </div>
+            <div class="div2footer">
+                <p style="color: white;">Join over 14,000 people, who receive bi-weekly web marketing tips. </p>
+                <input style="background-color: grey; width:80%; border: none; height: 25px; margin-right:0;" placeholder=" Enter Email Id">
+                <button style="background-color: grey; width:10%; color: white; border: none; height: 25px; margin-left:0;" class="fa fa-chevron-right"></button>
+            </div>
+        </div>
+        </div>
+        
+        <button class="fa fa-chevron-up" onclick="resetScroller('headId')" id="myBtn" title="Go to top"></button>
+        <script>
+            var scrollY = 0;
+            var distance = 40;
+            var speed = 24;
+            window.onscroll = function () {scrollFunction()};
+            
+            //Functions
+            function openNavOnClick(){
+                var pElement = document.getElementsByTagName("ul")[0];
+                pElement.classList.toggle('showing');
+            };
+             
+            function resetScroller(el){
+                var currentY = window.pageYOffset;
+                var targetY = document.getElementById(el).offsetTop;
+                var animator = setTimeout('resetScroller(\''+el+'\')', speed);
+                if(currentY > targetY){
+                    scrollY = currentY - distance;
+                    window.scroll(0,scrollY);
+                }
+                else
+                    clearTimeout(animator);
+            }
+            
+            function scrollFunction(){
+                //For displaying navigate to top button
+                if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10)
+                    document.getElementById("myBtn").style.display = "block";
+                else
+                    document.getElementById("myBtn").style.display = "none";
+                
+                //To position fix the nav bar
+                var pElement = document.getElementById('navElement');
+                var currentY = window.pageYOffset;
+                var targetY = pElement.offsetHeight;
+                document.getElementById('temp').innerHTML = currentY;
+                if(currentY >= targetY)
+                    pElement.classList.add("fixed");
+                else
+                    pElement.classList.remove("fixed");
+            }  
+        </script>
+    </body>
+</html>
